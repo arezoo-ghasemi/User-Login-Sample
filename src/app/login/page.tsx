@@ -1,6 +1,6 @@
 'use client'
 import { actionlogin } from "@/actions/actionlogin";
-// import AuthButton from "@/component/AuthButton";
+import AuthButton from "@/component/AuthButton";
 import  { ContextP } from "@/component/ContextC";
 import SubmitButton from "@/component/SubmitButton";
 import Link from "next/link";
@@ -37,7 +37,7 @@ const Page = () => {
                         <label htmlFor="save">Remember</label>
                     </div>
                     <SubmitButton/>
-                    {/* <AuthButton /> */}
+                    <AuthButton />
                 </form>   
                 <Link href={"/register"} className="text-blue-700 p-3 hover:text-blue-950 hover:cursor-pointer">{"User register"}</Link>        
             </div>
