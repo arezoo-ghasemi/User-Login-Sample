@@ -3,7 +3,7 @@ import userI from '../pic/userImage.webp'
 
 export default function Home() {
   return (
-    <div >
+    <div className=" h-screen overflow-hidden bg-gradient-to-b from-white from-70% to-blue-300">
       <div className="w-full text-xl font-bold text-center mt-5">
         <p>Login user sample site</p>
       </div>

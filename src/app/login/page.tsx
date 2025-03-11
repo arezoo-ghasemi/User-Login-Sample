@@ -26,7 +26,7 @@ const Page = () => {
 
 
     return (
-        <div className="w-full h-dvh flex justify-center bg-gradient-to-b from-gray-100 from-60% to-blue-500 ">
+        <div className="w-full  h-lvh overflow-auto flex justify-center bg-gradient-to-b from-white from-70% to-blue-300 ">
             <div className="w-full h-fit mx-3 lg:w-1/3 gap-3 mt-12 flex flex-col justify-center items-center border-1 shadow-2xl border-gray-700">
                 <form action={formAction}  className="w-full p-3 flex flex-col  gap-2">
                     {state?.message && !state?.success ? (<h1 className="font-bold text-center">{state?.message}</h1>):''}
