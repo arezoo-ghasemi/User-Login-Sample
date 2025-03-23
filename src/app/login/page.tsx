@@ -37,7 +37,9 @@ const Page = () => {
                         <label htmlFor="save">Remember</label>
                     </div>
                     <SubmitButton/>
-                    <AuthButton />
+                    <div className="flex items-center justify-center">
+                        <AuthButton />
+                    </div>                   
                 </form>   
                 <Link href={"/register"} className="text-blue-700 p-3 hover:text-blue-950 hover:cursor-pointer">{"User register"}</Link>        
             </div>

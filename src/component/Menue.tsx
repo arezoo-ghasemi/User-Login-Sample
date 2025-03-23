@@ -7,7 +7,7 @@ import Cookies from "universal-cookie";
 
 type aryType = {title:string, adr:string};
 const Menue = () => {
-    const ary:aryType[] = [{title:"Home", adr:"/"},{title:"About us", adr:"/about"}, {title:"Contact us", adr:"/contact"}];
+    const ary:aryType[] = [{title:"Home", adr:"/"},{title:"About us", adr:"/about"}, {title:"Contact us", adr:"/contact"}, {title:"User panel", adr:"/userpanel"}];
 
     const Cshow = useContext(ContextP);
     const route = useRouter();
@@ -25,7 +25,9 @@ const Menue = () => {
         <div className="flex flex-row border-y-1 border-gray-700 py-3 lg:px-7 px-1 justify-between">      
             <ul className="flex flex-row gap-3 font-bold text-gray-900">
                 {ary.map((elm:aryType, index: number)=>{
-                return <MenuItem key={index} item={elm} />
+                    if(elm.title!="User panel" || !Cshow?.show){
+                        return <MenuItem key={index} item={elm}/>
+                    }                
                 })}
             </ul>
             {Cshow?.show ? <div><button onClick={loginHandel} className="text-gray-100 hover:cursor-pointer bg-gray-950 py-1 px-7">{"Login"}</button></div>: 
